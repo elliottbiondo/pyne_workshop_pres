@@ -1,0 +1,114 @@
+\documentclass[12pt]{beamer}
+ 
+\usetheme[white,sections]{Wisconsin}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{anyfontsize}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
+\tikzset{
+    myarrow/.style={
+        draw,
+        fill=orange,
+        single arrow,
+        minimum height=4.5ex,
+        single arrow head extend=1ex
+    }
+}
+\tikzset{
+    mydoublearrow/.style={
+        draw,
+        fill=orange,
+        double arrow,
+        minimum height=10.5ex,
+        single arrow head extend=1ex
+    }
+}
+
+\newcommand{\arrowup}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=90] {};}
+}
+\newcommand{\arrowdown}{%
+\tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
+}
+\newcommand{\doublearrow}{%
+\tikz [baseline=-1ex]{\node [mydoublearrow,rotate=0] {};}
+}
+
+\begin{document}
+\newcommand*{\alphabet}{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz}
+\newlength{\highlightheight}
+\newlength{\highlightdepth}
+\newlength{\highlightmargin}
+\setlength{\highlightmargin}{2pt}
+\settoheight{\highlightheight}{\alphabet}
+\settodepth{\highlightdepth}{\alphabet}
+\addtolength{\highlightheight}{\highlightmargin}
+\addtolength{\highlightdepth}{\highlightmargin}
+\addtolength{\highlightheight}{\highlightdepth}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+\newcommand*{\Highlight}{\rlap{\textcolor{HighlightBackground}{\rule[-\highlightdepth]{\linewidth}{\highlightheight}}}}
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{section in toc}{fg=white}
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamercolor{bibliography item}{fg=black}
+\setbeamercolor*{bibliography entry title}{fg=black}
+%\setbeamerfont{section number projected}{size=\tiny}
+\setbeamerfont{section number projected}{size=\fontsize{6}{6}\selectfont}
+%\setbeamerfont{toc}{color=white}
+\setbeamercolor{section number projected}{bg=UWRed,fg=white}
+\hypersetup{linkcolor=white,urlcolor=white}
+
+\AtBeginSection{\frame{\sectionpage}}
+\defbeamertemplate{section page}{mine}[1][]{%
+  \begin{centering}
+    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+\setbeamertemplate{section page}[mine]
+
+%TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{presentation}   
+\author{Elliott Biondo}
+\institute{University of Wisconsin - Madison}
+\date{January 1, 2100}
+\frame[plain]{\titlepage \addtocounter{framenumber}{-1}} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Hello}
+Hello World \cite{Kalos_Whitlock}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Good bye}
+Goodbye world
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]
+        \tiny
+        \frametitle{References}
+        \bibliographystyle{ans}
+        \color{black}
+        \bibliography{refs}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
