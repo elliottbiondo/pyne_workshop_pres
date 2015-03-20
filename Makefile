@@ -25,4 +25,4 @@ clean:
 	find . -type f -name '*.toc' -delete
 	find . -type f -name '*.snm' -delete
 	find . -type f -name '*~' -delete
-
+	rm ${name}.pdf
