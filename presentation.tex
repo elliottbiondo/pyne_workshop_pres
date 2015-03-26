@@ -66,7 +66,9 @@
 \setbeamercolor{section number projected}{bg=UWRed,fg=white}
 \hypersetup{linkcolor=white,urlcolor=white}
 
-\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSection{\begin{frame}[plain] \sectionpage \end{frame}}
+\AtBeginSubsection{\begin{frame}[plain] \subsectionpage \end{frame}}
+
 \defbeamertemplate{section page}{mine}[1][]{%
   \begin{centering}
     {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
@@ -75,8 +77,23 @@
       \usebeamerfont{section title}\insertsection\par
     \end{beamercolorbox}
   \end{centering}
+\addtocounter{framenumber}{-1}
 }
+
+\defbeamertemplate{subsection page}{mine2}[1][]{%
+  \begin{centering}
+    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{section title}\insertsection:\par
+      \insertsubsection
+    \end{beamercolorbox}
+  \end{centering}
+\addtocounter{framenumber}{-1}
+}
+
 \setbeamertemplate{section page}[mine]
+\setbeamertemplate{subsection page}[mine2]
 
 %TITLE PAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
