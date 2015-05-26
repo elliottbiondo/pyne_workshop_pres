@@ -9,3 +9,4 @@ $(name).pdf: refs.bib $(TEX) $(PDF) $(PNG)
 	mv build/${name}.pdf .
 clean:
 	rm -rf build
+	rm ${name}.pdf
