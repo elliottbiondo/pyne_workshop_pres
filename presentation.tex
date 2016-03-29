@@ -42,15 +42,15 @@
 \begin{frame}[fragile]
 \frametitle{What is PyNE?}
 
-{\bf A collection of computational tools for nuclear energineering analysis and simulations}
+{\bf A collection of computational tools for nuclear engineering analysis and simulations}
 
 \begin{itemize}
 \item Python for Nuclear Engineering
 \begin{itemize}
 \item Includes Python, C++, and Fortran Code
 \end{itemize}
-\item Open Source
-\item Community Developed
+\item Open source
+\item Community developed
 \item 38 contributers to date
 \item http://pyne.io
 \end{itemize}
@@ -60,10 +60,38 @@
 \begin{frame}[fragile]
 \frametitle{PyNE capabilities}
 
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{pyne_splash.png}
+\end{column}
+\begin{column}{0.5\textwidth}
+Core functionality:
+\begin{itemize}
+\item{Nuclide/reaction naming}
+\item{Material handling}
+\item{Cross sections and nuclear data}
+\item{Mesh generation and operation}
+\item{Physics code support (MCNP5, PARTISN, ORIGEN 2.2, ...)}
+\item{In development: physics capabilities}
+\end{itemize}
+\end{column}
+\end{columns}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
 \frametitle{How to use PyNE}
+
+PyNE is a set of \emph{composable} tools
+\begin{itemize}
+\item Accomplish simple, general tasks, e.g.
+\begin{itemize}
+\item mix two materials
+\item read MCNP output
+\item collapse pointwise data into bins
+\end{itemize}
+\item Meant to be used as components within larger applications
+\end{itemize}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,33 +100,18 @@
 \centerline{\includegraphics[width=0.8\textwidth]{coupling.pdf}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]
-\frametitle{}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]
-\frametitle{}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]
-\frametitle{}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]
-\frametitle{}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[plain]
-        \tiny
-        \frametitle{References}
-        \bibliographystyle{ans}
-        \color{black}
-        \bibliography{refs}
-\end{frame}
+%\begin{frame}[fragile]
+%\frametitle{}
+%
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}[plain]
+%        \tiny
+%        \frametitle{References}
+%        \bibliographystyle{ans}
+%        \color{black}
+%        \bibliography{refs}
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
