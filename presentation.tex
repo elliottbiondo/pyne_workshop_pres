@@ -9,37 +9,6 @@
 \usepackage{wrapfig}
 \usepackage{graphicx}
 
-\usepackage{tikz}
-\usetikzlibrary{shapes.arrows}
-\tikzset{
-    myarrow/.style={
-        draw,
-        fill=orange,
-        single arrow,
-        minimum height=4.5ex,
-        single arrow head extend=1ex
-    }
-}
-\tikzset{
-    mydoublearrow/.style={
-        draw,
-        fill=orange,
-        double arrow,
-        minimum height=10.5ex,
-        single arrow head extend=1ex
-    }
-}
-
-\newcommand{\arrowup}{%
-\tikz [baseline=-0.5ex]{\node [myarrow,rotate=90] {};}
-}
-\newcommand{\arrowdown}{%
-\tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
-}
-\newcommand{\doublearrow}{%
-\tikz [baseline=-1ex]{\node [mydoublearrow,rotate=0] {};}
-}
-
 \begin{document}
 \newcommand*{\alphabet}{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz}
 \newlength{\highlightheight}
@@ -60,59 +29,67 @@
 \setbeamercolor{bibliography entry author}{fg=black}
 \setbeamercolor{bibliography item}{fg=black}
 \setbeamercolor*{bibliography entry title}{fg=black}
-%\setbeamerfont{section number projected}{size=\tiny}
-\setbeamerfont{section number projected}{size=\fontsize{6}{6}\selectfont}
-%\setbeamerfont{toc}{color=white}
-\setbeamercolor{section number projected}{bg=UWRed,fg=white}
 \hypersetup{linkcolor=white,urlcolor=white}
 
-\AtBeginSection{\begin{frame}[plain] \sectionpage \end{frame}}
-\AtBeginSubsection{\begin{frame}[plain] \subsectionpage \end{frame}}
-
-\defbeamertemplate{section page}{mine}[1][]{%
-  \begin{centering}
-    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
-    \vskip1em\par
-    \begin{beamercolorbox}[sep=12pt,center]{part title}
-      \usebeamerfont{section title}\insertsection\par
-    \end{beamercolorbox}
-  \end{centering}
-\addtocounter{framenumber}{-1}
-}
-
-\defbeamertemplate{subsection page}{mine2}[1][]{%
-  \begin{centering}
-    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
-    \vskip1em\par
-    \begin{beamercolorbox}[sep=12pt,center]{part title}
-      \usebeamerfont{section title}\insertsection:\par
-      \insertsubsection
-    \end{beamercolorbox}
-  \end{centering}
-\addtocounter{framenumber}{-1}
-}
-
-\setbeamertemplate{section page}[mine]
-\setbeamertemplate{subsection page}[mine2]
-
-%TITLE PAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{presentation}   
-\author{Elliott Biondo}
-\institute{University of Wisconsin - Madison}
-\date{January 1, 2100}
+\title{PyNE Tutorial Workshop}   
+\author{Elliott Biondo*, Katy Huff$^\dagger$, Patrick Shriwise*, \\ Nancy Granda Duarte*, Marissa Ramirez Zweiger$^\dagger$}
+\institute{*University of Wisconsin - Madison\\
+           $^\dagger$University of California - Berkeley \\}
+\date{March 31, 2016}
 \frame[plain]{\titlepage \addtocounter{framenumber}{-1}} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Hello}
-Hello World \cite{Kalos_Whitlock}
+\frametitle{What is PyNE?}
+
+{\bf A collection of computational tools for nuclear energineering analysis and simulations}
+
+\begin{itemize}
+\item Python for Nuclear Engineering
+\begin{itemize}
+\item Includes Python, C++, and Fortran Code
+\end{itemize}
+\item Open Source
+\item Community Developed
+\item 38 contributers to date
+\item http://pyne.io
+\end{itemize}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Good bye}
-Goodbye world
+\frametitle{PyNE capabilities}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{How to use PyNE}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{How I use PyNE}
+\centerline{\includegraphics[width=0.8\textwidth]{coupling.pdf}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[plain]
